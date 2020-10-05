@@ -27,7 +27,8 @@ pipeline {
                 }
             }
             steps {
-                sh "bash /home/entrypoint.sh debricked:scan $DEBRICKED_CREDENTIALS_USR $DEBRICKED_CREDENTIALS_PSW <repository-name> <commit-name> null cli"
+                sh "env"
+                sh "bash /home/entrypoint.sh debricked:scan $DEBRICKED_CREDENTIALS_USR $DEBRICKED_CREDENTIALS_PSW jenkinsrepo_manual jenkinscommit null cli"
             }
         }
     }
