@@ -12,10 +12,6 @@ pipeline {
                 sh "npm install"
                 sh "npm test"
                 sh "node index.js"
-                sh "env"
-                sh "pwd"
-                sh "find ."
-                sh "mount"
             }
         }
 
@@ -31,7 +27,6 @@ pipeline {
                 }
             }
             steps {
-                sh "pwd"
                 sh 'bash /home/entrypoint.sh debricked:scan "$DEBRICKED_CREDENTIALS_USR" "$DEBRICKED_CREDENTIALS_PSW" example-jenkins "$GIT_COMMIT" null cli'
             }
         }
