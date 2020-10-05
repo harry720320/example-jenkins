@@ -27,15 +27,12 @@ pipeline {
             agent {
                 docker {
                     image 'debricked/debricked-cli'
-                    args '--entrypoint="" -w ${WORKSPACE}:/data -w /data'
+                    args '--entrypoint="" -v ${WORKSPACE}:/data -w /data'
                 }
             }
             steps {
                 sh "pwd"
-                sh "find ."
-                sh "mount"
-                sh "env"
-                sh "bash /home/entrypoint.sh debricked:scan $DEBRICKED_CREDENTIALS_USR $DEBRICKED_CREDENTIALS_PSW jenkinsrepo_manual $GIT_COMMIT null cli"
+                sh 'bash /home/entrypoint.sh debricked:scan "$DEBRICKED_CREDENTIALS_USR" "$DEBRICKED_CREDENTIALS_PSW" example-jenkins "$GIT_COMMIT" null cli'
             }
         }
     }
