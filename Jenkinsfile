@@ -17,7 +17,7 @@ pipeline {
 
         stage('Vulnerability scan') {
             environment {
-                DEBRICKED_CREDENTIALS = credentials('debricked-creds'>)
+                DEBRICKED_CREDENTIALS = credentials('debricked-creds')
             }
 
             agent {
