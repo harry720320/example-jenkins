@@ -1,0 +1,22 @@
+{
+  "name": "example-jenkins",
+  "version": "1.0.0",
+  "description": "Example node js project to test jenkins",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debricked/example-jenkins.git"
+  },
+  "author": "Linus Karlsson <linus.karlsson@debricked.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debricked/example-jenkins/issues"
+  },
+  "homepage": "https://github.com/debricked/example-jenkins#readme",
+  "dependencies": {
+    "standard": "^14.3.4"
+  }
+}
